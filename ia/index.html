@@ -869,9 +869,10 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
         <p class="msg-err" id="opErr" role="alert"></p>
         <div class="send">
           <button type="button" class="btn btn-wa" data-via="wa">Enviar pelo WhatsApp</button>
-          <button type="button" class="btn btn-ghost" data-via="mail">Enviar por e-mail</button>
+          <button type="button" class="btn btn-ghost" data-via="gmail">Enviar pelo Gmail</button>
+          <button type="button" class="btn btn-ghost" data-via="mail">Outro e-mail</button>
         </div>
-        <p class="note">O WhatsApp ou o seu aplicativo de e-mail abre com as respostas já escritas; basta confirmar o envio.</p>
+        <p class="note" id="opNote">O WhatsApp ou o e-mail abre com as respostas já escritas; basta confirmar o envio. Se nada abrir, use <a href="#" id="opCopy">Copiar respostas</a> e cole numa mensagem para <strong>contato@smarttcc.com.br</strong>.</p>
       </form>
     </div>
   </div>
@@ -897,14 +898,19 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
   }
   f.querySelectorAll('button[data-via]').forEach(function(b){b.addEventListener('click',function(){
     var err=document.getElementById('opErr');
-    if(!val('opQ1')&&!val('opQ2')&&!val('opQ4')&&!q3()){err.textContent='Responda pelo menos uma pergunta antes de enviar.';return}
+    if(!val('opQ1')&&!val('opQ2')&&!val('opQ4')&&!q3()){err.style.color='';err.textContent='Responda pelo menos uma pergunta antes de enviar.';return}
     err.textContent='';
-    var t=texto();
-    var url=b.dataset.via==='wa'
-      ?'https://wa.me/5571981998304?text='+encodeURIComponent(t)
-      :'mailto:contato@smarttcc.com.br?subject='+encodeURIComponent('Opinião sobre a nova Home do Smart TCC')+'&body='+encodeURIComponent(t);
-    if(b.dataset.via==='wa'){window.open(url,'_blank')||(location.href=url)}else{location.href=url}
+    var t=texto(), via=b.dataset.via, assunto=encodeURIComponent('Opinião sobre a nova Home do Smart TCC'), corpo=encodeURIComponent(t);
+    if(via!=='wa') copiar(t,true);
+    if(via==='wa'){var u='https://wa.me/5571981998304?text='+corpo;window.open(u,'_blank')||(location.href=u)}
+    else if(via==='gmail'){var g='https://mail.google.com/mail/?view=cm&fs=1&to=contato@smarttcc.com.br&su='+assunto+'&body='+corpo;window.open(g,'_blank')||(location.href=g)}
+    else{location.href='mailto:contato@smarttcc.com.br?subject='+assunto+'&body='+corpo}
   })});
+  function copiar(t,auto){
+    var ok=function(){var n=document.getElementById('opErr');n.style.color='var(--brand-deep)';n.textContent=auto?'As respostas também foram copiadas. Se o e-mail não abrir, cole-as numa mensagem para contato@smarttcc.com.br.':'Respostas copiadas. Cole numa mensagem para contato@smarttcc.com.br.'};
+    try{navigator.clipboard.writeText(t).then(ok,function(){})}catch(e){}
+  }
+  document.getElementById('opCopy').addEventListener('click',function(e){e.preventDefault();copiar(texto(),false)});
 })();
 </script>
 
