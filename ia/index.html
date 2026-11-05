@@ -839,6 +839,17 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
 .op button.btn-ghost{background:transparent}
 .op .msg-err{color:var(--note);font-weight:600;min-height:1.4em}
 .op .note{font-size:.9rem;color:var(--muted)}
+.op button.btn-primary{cursor:pointer}
+.op button[disabled]{opacity:.6;cursor:wait}
+.op .alt{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:.9rem;color:var(--muted)}
+.op .alt button{font:inherit;font-weight:600;color:var(--brand-deep);background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
+.op .alt a{color:var(--brand-deep);font-weight:600}
+.op .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.op .thanks{display:none;background:var(--paper);border:1.5px solid var(--brand);border-radius:16px;padding:22px 24px}
+.op .thanks h3{font-family:var(--f-display);margin:0 0 6px;color:var(--brand-deep)}
+.op .thanks p{margin:0}
+.op.sent form{display:none}
+.op.sent .thanks{display:block}
 .op-float{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;background:#F7E834;color:#12283A;font-family:var(--f-display);font-weight:700;font-size:.95rem;text-decoration:none;border-radius:999px;padding:12px 18px;box-shadow:0 6px 18px rgb(0 0 0 / .25)}
 @media (max-width:600px){.op .two{grid-template-columns:1fr}.op-float{font-size:.85rem;padding:11px 14px}.wa-float span{display:none}.wa-float{padding:12px}}
 </style>
@@ -848,7 +859,7 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
       <div class="sec-head" style="margin-bottom:0">
         <p class="eyebrow">Para revisores</p>
         <h2>Sua opinião sobre esta proposta</h2>
-        <p class="lead">Obrigado por avaliar a nova página do Smart TCC. Responda o que quiser; nenhuma pergunta é obrigatória. Ao final, escolha enviar pelo WhatsApp ou por e-mail.</p>
+        <p class="lead">Obrigado por avaliar a nova página do Smart TCC. Responda o que quiser; nenhuma pergunta é obrigatória. Ao final, clique em <strong>Enviar opinião</strong>.</p>
       </div>
       <form id="opForm" novalidate>
         <div class="two">
@@ -866,14 +877,18 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
           </div>
         </fieldset>
         <div><label for="opQ4">Dê sua opinião <small>(texto livre: o que gostou, o que mudaria, o que faltou)</small></label><textarea id="opQ4" class="big"></textarea></div>
+        <div class="hp" aria-hidden="true"><label for="opSite">Não preencha</label><input type="text" id="opSite" tabindex="-1" autocomplete="off"></div>
         <p class="msg-err" id="opErr" role="alert"></p>
         <div class="send">
-          <button type="button" class="btn btn-wa" data-via="wa">Enviar pelo WhatsApp</button>
-          <button type="button" class="btn btn-ghost" data-via="gmail">Enviar pelo Gmail</button>
-          <button type="button" class="btn btn-ghost" data-via="mail">Outro e-mail</button>
+          <button type="button" class="btn btn-primary" id="opEnviar">Enviar opinião</button>
         </div>
-        <p class="note" id="opNote">O WhatsApp ou o e-mail abre com as respostas já escritas; basta confirmar o envio. Se nada abrir, use <a href="#" id="opCopy">Copiar respostas</a> e cole numa mensagem para <strong>contato@smarttcc.com.br</strong>.</p>
+        <p class="alt">Prefere outro caminho? <button type="button" data-via="wa">WhatsApp</button> <button type="button" data-via="gmail">Gmail</button> <button type="button" data-via="mail">Outro e-mail</button> <a href="#" id="opCopy">Copiar respostas</a></p>
+        <p class="note" id="opNote">Suas respostas ficam guardadas numa planilha do Smart TCC, usada só para melhorar esta página. Nome e área são opcionais.</p>
       </form>
+      <div class="thanks" id="opObrigado" role="status" tabindex="-1">
+        <h3>Recebemos sua opinião. Muito obrigado!</h3>
+        <p>Ela já está registrada e será lida com atenção por Sergio e pela equipe do Smart TCC.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -910,6 +925,27 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
     var ok=function(){var n=document.getElementById('opErr');n.style.color='var(--brand-deep)';n.textContent=auto?'As respostas também foram copiadas. Se o e-mail não abrir, cole-as numa mensagem para contato@smarttcc.com.br.':'Respostas copiadas. Cole numa mensagem para contato@smarttcc.com.br.'};
     try{navigator.clipboard.writeText(t).then(ok,function(){})}catch(e){}
   }
+  var URL_OP='https://script.google.com/macros/s/AKfycbzcgKx_vwI5DOmS1Er4mBUlYWSFn3JTkqjQcSlC1hxVJc34unO8mvz3YzY7Xcglvsmw/exec';
+  var btn=document.getElementById('opEnviar');
+  btn.addEventListener('click',function(){
+    var err=document.getElementById('opErr');
+    if(!val('opQ1')&&!val('opQ2')&&!val('opQ4')&&!q3()){err.style.color='';err.textContent='Responda pelo menos uma pergunta antes de enviar.';return}
+    err.style.color='var(--brand-deep)';err.textContent='Enviando…';btn.disabled=true;
+    var dados={nome:val('opNome'),area:val('opArea'),q1:val('opQ1'),q2:val('opQ2'),q3:q3(),q4:val('opQ4'),site:document.getElementById('opSite').value};
+    fetch(URL_OP,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(dados)})
+      .then(function(r){return r.json()})
+      .then(function(j){
+        if(!j||!j.ok) throw new Error('falha');
+        try{localStorage.removeItem('opRascunho')}catch(e){}
+        err.textContent='';
+        document.getElementById('opiniao').classList.add('sent');
+        var t=document.getElementById('opObrigado');t.focus();t.scrollIntoView({block:'center'});
+      })
+      .catch(function(){
+        btn.disabled=false;err.style.color='';
+        err.textContent='Não consegui enviar agora. Suas respostas continuam aqui: tente de novo ou use o WhatsApp logo abaixo.';
+      });
+  });
   document.getElementById('opCopy').addEventListener('click',function(e){e.preventDefault();copiar(texto(),false)});
 })();
 </script>
