@@ -402,6 +402,11 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
 .diff .agente-txt .fecho,.modo-cards .fecho{grid-column:1/-1;margin-top:10px;background:#0F6B6A;color:#FFFFFF;border-radius:18px;padding:clamp(24px,3.4vw,38px) clamp(24px,4vw,48px);font-family:var(--f-display);font-weight:700;font-size:clamp(1.12rem,1.9vw,1.42rem);line-height:1.4;text-wrap:balance}
 .diff .agente-txt .fecho span,.modo-cards .fecho span{color:#F7E834}
 @media (max-width:760px){.diff .agente-txt,.modo-cards{grid-template-columns:1fr}.ag-card{grid-template-columns:1fr;padding:22px}.ag-card .ag-ico{grid-row:auto;margin-bottom:6px}}
+/* Exemplos de perguntas ao AGENTE (balões de chat) */
+.ag-exemplos{grid-column:1/-1;margin-top:14px}
+.ag-ex-titulo{font-family:var(--f-display);font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-deep);margin-bottom:12px}
+.ag-exemplos ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 12px}
+.ag-exemplos li{background:color-mix(in srgb,var(--brand) 14%,transparent);color:var(--ink);border-radius:16px 16px 16px 4px;padding:10px 16px;font-size:.98rem;line-height:1.35}
 /* Mesmos cartões na faixa do modo PROFESSOR (fundo claro: cartões brancos) */
 .modo-cards{margin-top:48px}
 .modo-cards .ag-card{background:var(--surface)}
@@ -602,6 +607,56 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
   </div>
 </section>
 
+<!-- ===================== PERCURSO (modo PROFESSOR + perguntas ao AGENTE) ===================== -->
+<section id="metodo">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">O percurso do modo PROFESSOR</p>
+      <h2>Sete etapas, na ordem em que a pesquisa acontece</h2>
+      <p class="lead">Uma página para cada etapa, do tema à banca.</p>
+    </div>
+    <ol class="steps">
+      <li><span class="n">1</span><h3>Tema e contexto</h3><p>Delimite o assunto e justifique por que ele merece ser pesquisado.</p></li>
+      <li><span class="n">2</span><h3>Pergunta de pesquisa</h3><p>A pergunta conduz todo o trabalho. Formule uma Pergunta Estruturada e verifique-a pelos 7 Critérios do Smart.</p></li>
+      <li><span class="n">3</span><h3>Revisão da literatura</h3><p>Selecione as obras que realmente importam, aplique a Análise Bibliométrica e estude a fundo as melhores referências.</p></li>
+      <li><span class="n">4</span><h3>Metodologia da pesquisa</h3><p>Compreenda os tipos de estudo, organize variáveis, estruture o Modelo de Análise, especifique a coleta e a análise dos dados com critérios claros. </p></li>
+      <li><span class="n">5</span><h3>Coleta e organização dos dados</h3><p>Identifique variáveis, colete e organize os dados com precisão.</p></li>
+      <li><span class="n">6</span><h3>Resultados e conclusão</h3><p>Interprete os resultados e responda à sua pergunta com segurança.</p></li>
+      <li><span class="n">7</span><h3>Formatação, banca e publicação</h3><p>Deixe tudo nas normas e prepare a defesa.</p></li>
+    </ol>
+    <div class="agente-txt modo-cards">
+      <article class="ag-card">
+        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5c2.5-1 5.5-1 9 1 3.5-2 6.5-2 9-1V19c-2.5-1-5.5-1-9 1-3.5-2-6.5-2-9-1z"/><path d="M12 6.5V20"/></svg></span>
+        <h3>O que é</h3>
+        <p>É um curso completo de Metodologia de Pesquisa e de elaboração de Monografias (TCCs de graduação, mestrado e doutorado), com uma página dedicada a cada etapa de pesquisa e tópico de monografia: videoaula explicativa, passo a passo de como fazer, formatação ABNT, exemplos e autotestes.</p>
+      </article>
+      <article class="ag-card">
+        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h9M3 12h6M3 18h9"/><path d="M14 9l7 3.2-3 1.1-1.1 3z"/></svg></span>
+        <h3>Onde encontrar</h3>
+        <p>Acesse cada tópico e etapa pelo Menu do Smart, disponível em todas as páginas. Apenas clique no item do Menu para acessar a página do tópico de seu interesse.</p>
+      </article>
+      <article class="ag-card">
+        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9.5v5l4.5-2.5z"/></svg></span>
+        <h3>Objetos de aprendizagem</h3>
+        <ul class="objetos">
+          <li><b>13</b><span>Videoaulas</span><small>curtas, explicando as partes do TCC</small></li>
+          <li><b>435</b><span>Slides</span><small>o passo a passo de cada parte</small></li>
+          <li><b>15</b><span>Infográficos</span><small>com a formatação ABNT completa</small></li>
+          <li><b>22</b><span>Exemplos</span><small>de cada parte de um TCC</small></li>
+          <li><b>6</b><span>Autotestes</span><small>para verificar o que aprendeu</small></li>
+          <li><b>10</b><span>Páginas de apoio</span><small>Bibliografia, Banca e Publicação, Guia ABNT, Guia de IA e outras</small></li>
+        </ul>
+      </article>
+      <article class="ag-card">
+        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2 2.2.8-2.2.8L19 21l-.8-2.2-2.2-.8 2.2-.8z"/></svg></span>
+        <h3>Uso de IA dentro do modo PROFESSOR</h3>
+        <p>Ao final de cada página, você encontrará informações detalhadas sobre custos e funcionalidades das ferramentas de IA aplicáveis ao conteúdo da página, além de um prompt pronto para ser aplicado. Essa orientação é independente do uso do modo AGENTE e faz parte do conteúdo do modo PROFESSOR.</p>
+      </article>
+      <p class="fecho">Ou seja, com o Smart você pode realizar todo o curso de ponta a ponta no <span>modo PROFESSOR</span> e, quando quiser, pode acionar o <span>modo AGENTE</span> para estudar e esclarecer pontos específicos. <span>O Smart é completo.</span></p>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== POR QUE NÃO UMA IA QUALQUER (antigo "Diferenciais") ===================== -->
 <section class="diff" id="ia-qualquer">
   <div class="wrap">
@@ -638,57 +693,18 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
         <h3>Agente PARECER <span class="tag">Adicional</span></h3>
         <p>Se desejar uma análise integral de seu projeto de pesquisa ou de sua dissertação antes da apresentação a uma banca, você pode contratar por preço módico o agente PARECER, para obter um feedback de alta qualidade, com avaliação do seu trabalho, identificação de lacunas e sugestão de ajustes necessários.</p>
       </article>
-      <p class="fecho">O Smart atende a todas as suas necessidades em pesquisa e monografias com <span>rigor acadêmico</span>, <span>design inovador</span> e <span>elevada facilidade de acesso</span> aos conteúdos.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== PERCURSO (modo PROFESSOR + perguntas ao AGENTE) ===================== -->
-<section id="metodo">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">O percurso do modo PROFESSOR</p>
-      <h2>Sete etapas, na ordem em que a pesquisa acontece</h2>
-      <p class="lead">O modo PROFESSOR conduz você por cada etapa, passo a passo.                                         Ao final de cada etapa, uma orientação completa sobre as ferramentas de IA disponíveis, incluindo um prompt aplicável à etapa.                                                                                             E quando surgir uma dúvida, o modo AGENTE está a uma pergunta de distância.</p>
-    </div>
-    <ol class="steps">
-      <li><span class="n">1</span><h3>Tema e contexto</h3><p>Delimite o assunto e justifique por que ele merece ser pesquisado.</p><span class="ask"><b>Pergunte ao Agente</b>“Meu tema está delimitado o suficiente?”</span></li>
-      <li><span class="n">2</span><h3>Pergunta de pesquisa</h3><p>A pergunta conduz todo o trabalho. Formule uma Pergunta Estruturada e verifique-a pelos 7 Critérios do Smart.</p><span class="ask"><b>Pergunte ao Agente</b>“Avalie minha pergunta pelos 7 Critérios.”</span></li>
-      <li><span class="n">3</span><h3>Revisão da literatura</h3><p>Selecione as obras que realmente importam, aplique a Análise Bibliométrica e estude a fundo as melhores referências.</p><span class="ask"><b>Pergunte ao Agente</b>“Como faço a análise bibliométrica?”</span></li>
-      <li><span class="n">4</span><h3>Metodologia da pesquisa</h3><p>Compreenda os tipos de estudo, organize variáveis, estruture o Modelo de Análise, especifique a coleta e a análise dos dados com critérios claros. </p><span class="ask"><b>Pergunte ao Agente</b>“Meu objetivo combina com o meu método?”</span></li>
-      <li><span class="n">5</span><h3>Coleta e organização dos dados</h3><p>Identifique variáveis, colete e organize os dados com precisão.</p><span class="ask"><b>Pergunte ao Agente</b>“Quais variáveis devo considerar?”</span></li>
-      <li><span class="n">6</span><h3>Resultados e conclusão</h3><p>Interprete os resultados e responda à sua pergunta com segurança.</p><span class="ask"><b>Pergunte ao Agente</b>“Minha conclusão responde à pergunta?”</span></li>
-      <li><span class="n">7</span><h3>Formatação, banca e publicação</h3><p>Deixe tudo nas normas e prepare a defesa.</p><span class="ask"><b>Pergunte ao Agente</b>“Como cito um artigo com três autores?”</span></li>
-    </ol>
-    <div class="agente-txt modo-cards">
-      <article class="ag-card">
-        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5c2.5-1 5.5-1 9 1 3.5-2 6.5-2 9-1V19c-2.5-1-5.5-1-9 1-3.5-2-6.5-2-9-1z"/><path d="M12 6.5V20"/></svg></span>
-        <h3>O que é</h3>
-        <p>É um curso completo de Metodologia de Pesquisa e de elaboração de Monografias (TCCs de graduação, mestrado e doutorado), com uma página dedicada a cada etapa de pesquisa e tópico de monografia: videoaula explicativa, passo a passo de como fazer, formatação ABNT, exemplos e autotestes.</p>
-      </article>
-      <article class="ag-card">
-        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h9M3 12h6M3 18h9"/><path d="M14 9l7 3.2-3 1.1-1.1 3z"/></svg></span>
-        <h3>Onde encontrar</h3>
-        <p>Acesse cada tópico e etapa pelo Menu do Smart, disponível em todas as páginas. Apenas clique no item do Menu para acessar a página do tópico de seu interesse.</p>
-      </article>
-      <article class="ag-card">
-        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9.5v5l4.5-2.5z"/></svg></span>
-        <h3>Objetos de aprendizagem</h3>
-        <ul class="objetos">
-          <li><b>13</b><span>Videoaulas</span><small>curtas, explicando as partes do TCC</small></li>
-          <li><b>435</b><span>Slides</span><small>o passo a passo de cada parte</small></li>
-          <li><b>15</b><span>Infográficos</span><small>com a formatação ABNT completa</small></li>
-          <li><b>22</b><span>Exemplos</span><small>de cada parte de um TCC</small></li>
-          <li><b>6</b><span>Autotestes</span><small>para verificar o que aprendeu</small></li>
-          <li><b>10</b><span>Páginas de apoio</span><small>Bibliografia, Banca e Publicação, Guia ABNT, Guia de IA e outras</small></li>
+      <div class="ag-exemplos">
+        <p class="ag-ex-titulo">Exemplos de perguntas ao modo AGENTE</p>
+        <ul>
+          <li>“Meu tema está delimitado o suficiente?”</li>
+          <li>“Avalie minha pergunta pelos 7 Critérios.”</li>
+          <li>“Como faço a análise bibliométrica?”</li>
+          <li>“Meu objetivo combina com o meu método?”</li>
+          <li>“Minha conclusão responde à pergunta?”</li>
+          <li>“Como cito um artigo com três autores?”</li>
         </ul>
-      </article>
-      <article class="ag-card">
-        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2 2.2.8-2.2.8L19 21l-.8-2.2-2.2-.8 2.2-.8z"/></svg></span>
-        <h3>Uso de IA dentro do modo PROFESSOR</h3>
-        <p>Ao final de cada página, você encontrará informações detalhadas sobre custos e funcionalidades das ferramentas de IA aplicáveis ao conteúdo da página, além de um prompt pronto para ser aplicado. Essa orientação é independente do uso do modo AGENTE e faz parte do conteúdo do modo PROFESSOR.</p>
-      </article>
-      <p class="fecho">Ou seja, com o Smart você pode realizar todo o curso de ponta a ponta no <span>modo PROFESSOR</span> e, quando quiser, pode acionar o <span>modo AGENTE</span> para estudar e esclarecer pontos específicos. <span>O Smart é completo.</span></p>
+      </div>
+      <p class="fecho">O Smart atende a todas as suas necessidades em pesquisa e monografias com <span>rigor acadêmico</span>, <span>design inovador</span> e <span>elevada facilidade de acesso</span> aos conteúdos.</p>
     </div>
   </div>
 </section>
