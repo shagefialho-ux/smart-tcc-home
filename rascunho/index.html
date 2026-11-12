@@ -329,6 +329,10 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
 .chat .input{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #D3E3E3;padding:9px 14px;color:#4C6470;font-size:.82rem;background:#FFFFFF;border-radius:0 0 15px 15px}
 .chat .input span:last-child{font-family:var(--f-mono);font-size:.7rem;background:#F7E834;color:#12283A;border-radius:6px;padding:2px 7px}
 .hand3{justify-self:start;font-family:var(--f-hand);color:var(--note);font-size:1.55rem;line-height:1.05;transform:rotate(-2.5deg);margin:12px 0 0 6px;max-width:400px}
+/* Frase do modo AGENTE alinhada ao cartão do chat: a seta fica embaixo do cartão e aponta para ele */
+.hand3{justify-self:end;width:min(400px,94%);max-width:none;margin:12px -14px 0 0;padding-left:30px}
+@media (max-width:1000px){.hand3{margin-right:0}}
+@media (max-width:520px){.hand3{width:98%;margin-right:-6px;padding-left:24px}}
 @media (max-width:1000px){.sticky{right:-4px}.chat .sticky{right:-6px}.chat{margin-right:0}}
 .hero{overflow-x:clip}
 @media (max-width:860px){.visual{margin-top:12px}.chat{margin-right:0}}
@@ -420,7 +424,7 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
     <div class="copy">
       <p class="eyebrow"><span class="new">Novo</span>Smart TCC: mentoria com inteligência artificial</p>
       <h1><span>TCC apoiado por IA.</span><span>Do tema à banca.</span><span><span class="mark">Com método.</span></span></h1>
-      <p class="lead">Nos dois modos de mentoria, o Smart trabalha sobre uma base de conhecimento construída pelo Prof. Sergio Fialho em mais de 15 anos ensinando metodologia e desenvolvendo e orientando mais de 68 pesquisas, em TCCs de graduação, mestrado e doutorado. </p>
+      <p class="lead">Em seus dois modos de mentoria, o Smart utiliza uma base de conhecimento exclusiva, construída pelo Prof. Sergio Fialho. São mais de 15 anos de ensino de metodologia e mais de 68 pesquisas concluídas, em artigos e TCCs de graduação, mestrado e doutorado. </p>
       <div class="modes-mini" aria-label="Os dois modos do Smart">
         <div><b>MODO PROFESSOR</b><span>O Smart conduz: cada etapa da pesquisa, explicada passo a passo, da&nbsp;pergunta&nbsp;à&nbsp;banca.<span class="extra">13 videoaulas, 435 slides, 22 exemplos.<br>Acesso ilimitado por 2 anos.</span></span></div>
         <div class="ag"><b>MODO AGENTE</b><span>Você conduz: faça perguntas livremente, tire dúvidas, interaja e receba avaliações.<span class="extra">120 perguntas incluídas.</span></span></div>
