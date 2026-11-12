@@ -270,6 +270,25 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
 .cv li{display:grid;grid-template-columns:22px 1fr;gap:10px}
 .cv li::before{content:"✓";font-weight:800;color:var(--brand)}
 @media (max-width:720px){.author-grid2{grid-template-columns:1fr}.author-grid2 img{max-width:220px}}
+/* Autor (versão enxuta): foto | texto | vídeo no computador; vídeo sob a foto em telas médias; tudo empilhado no celular */
+.author-grid2{grid-template-columns:220px minmax(0,1fr) 200px;grid-template-areas:"foto texto video"}
+.author-grid2 > img{grid-area:foto}
+.author-grid2 > .au-texto{grid-area:texto}
+.author-grid2 > .au-video{grid-area:video}
+.au-dest{list-style:none;margin:4px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.au-dest li{display:grid;gap:2px;align-content:start;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.au-dest b{font-family:var(--f-display);font-weight:800;font-size:1.6rem;line-height:1.1;color:var(--brand-deep)}
+.au-dest span{color:var(--muted);font-size:.92rem;line-height:1.35}
+.au-ia{font-size:.95rem;color:var(--muted);border-left:3px solid var(--marker);padding-left:12px}
+.au-video .eyebrow{margin:0}
+.au-video video{border-radius:14px}
+@media (max-width:999px){.author-grid2{grid-template-columns:200px minmax(0,1fr);grid-template-areas:"foto texto" "video texto"}}
+@media (max-width:720px){.author-grid2{grid-template-columns:1fr;grid-template-areas:"foto" "texto" "video"}.au-video{max-width:240px}}
+@media (max-width:420px){.au-dest{grid-template-columns:1fr}}
+/* Quem confia: texto à esquerda, instituições e números à direita */
+.proof-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.proof-dados{display:grid;gap:18px;align-content:center}
+@media (max-width:820px){.proof-grid{grid-template-columns:1fr}}
 
 .guarantee{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;border:2px solid var(--brand);border-radius:16px;padding:20px 22px;background:var(--surface);margin-top:8px}
 .guarantee .seal{width:66px;height:66px;border-radius:50%;background:var(--marker);color:var(--on-marker);display:grid;place-content:center;font-family:var(--f-display);font-weight:800;line-height:1;text-align:center;font-size:1.6rem}
@@ -607,6 +626,33 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
   </div>
 </section>
 
+<!-- ===================== AUTOR (logo após "Como funciona": autoridade antes dos detalhes do produto) ===================== -->
+<section class="author" id="autor">
+  <div class="wrap author-grid2">
+    <img src="../foto-sergio-web.jpg" alt="Prof. Sergio Fialho" width="507" height="520">
+    <div class="au-texto">
+      <p class="eyebrow">Quem está por trás da IA do Smart</p>
+      <h2>Prof. Sergio Fialho</h2>
+      <p class="lead">A base de conhecimento da IA reúne o método de quem, por mais de 15 anos, ensinou metodologia científica e orientou pesquisas na graduação, no mestrado e no doutorado, em universidades públicas e privadas. Os agentes são desenvolvidos e supervisionados por ele.</p>
+      <ul class="au-dest">
+        <li><b>Doutor</b><span>em Administração pela UFBA</span></li>
+        <li><b>15+ anos</b><span>ensinando Metodologia de Pesquisa</span></li>
+        <li><b>68</b><span>pesquisas orientadas, 52 delas em mestrado e doutorado</span></li>
+        <li><b>5.000</b><span>alunos de graduação em Metodologia Científica</span></li>
+      </ul>
+      <p class="au-ia">Pesquisas recentes sobre IA: o uso do ChatGPT por estudantes do ensino superior (UNIFACS, 2023–2024) e a avaliação do Plano Brasileiro de Inteligência Artificial (2026).</p>
+      <a class="btn btn-ghost" style="justify-self:start" href="https://www.smarttcc.com.br/curriculo-do-autor">Currículo de Sergio Fialho</a>
+    </div>
+    <figure class="liz au-video">
+      <p class="eyebrow">Depoimento de quem conhece</p>
+      <video controls="" playsinline="" preload="metadata" poster="../depoimento-liz-capa.jpg" aria-label="Depoimento em vídeo de Lissandra Silva">
+        <source src="../depoimento-liz.mp4" type="video/mp4">
+      </video>
+      <figcaption><strong>Lissandra Silva</strong><br>Aluna pesquisadora em Iniciação Científica (UNIFACS/FAPESB)</figcaption>
+    </figure>
+  </div>
+</section>
+
 <!-- ===================== PERCURSO (modo PROFESSOR + perguntas ao AGENTE) ===================== -->
 <section id="metodo">
   <div class="wrap">
@@ -716,6 +762,9 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
       <p class="eyebrow">Quem confia no Smart</p>
       <h2>Parceiro do Grupo Ser Educacional</h2>
       <p class="lead">O Smart TCC é oferecido na GoKursos, a plataforma do Grupo Ser Educacional com cursos livres e disciplinas curriculares a distância, aberta ao público de todo o país.</p>
+      <a class="more" href="https://www.sereducacional.com/instituicoes.html">Conhecer o Grupo Ser Educacional →</a>
+    </div>
+    <div class="proof-dados">
       <ul class="brands" aria-label="Instituições do Grupo Ser Educacional">
         <li>UNINASSAU</li><li>UNAMA</li><li>UNG</li><li>UNINORTE</li><li>UNIFAEL</li><li>UNI7</li>
       </ul>
@@ -724,15 +773,7 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
         <div><b>40 mil</b><small>concluintes por ano</small></div>
       </div>
       <p class="src">Números aproximados, estimados a partir do Censo da Educação Superior 2024 (Inep).</p>
-      <a class="more" href="https://www.sereducacional.com/instituicoes.html">Conhecer o Grupo Ser Educacional →</a>
     </div>
-    <figure class="liz">
-      <p class="eyebrow">Depoimento de quem usou</p>
-      <video controls="" playsinline="" preload="metadata" poster="../depoimento-liz-capa.jpg" aria-label="Depoimento em vídeo de Lissandra Silva">
-        <source src="../depoimento-liz.mp4" type="video/mp4">
-      </video>
-      <figcaption><strong>Lissandra Silva</strong><br>Aluna pesquisadora em Iniciação Científica (UNIFACS/FAPESB)</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -758,28 +799,6 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
         <a class="more" href="https://wa.me/5571981998304?text=Ol%C3%A1!%20Quero%20conhecer%20o%20modelo%20de%20parceria%20institucional%20do%20Smart%20TCC.">Falar sobre parceria institucional →</a>
         <span class="src">Ou escreva para contato@smarttcc.com.br</span>
       </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== AUTOR (ajuste pontual: quem está por trás da IA) ===================== -->
-<section class="author">
-  <div class="wrap author-grid2">
-    <img src="../foto-sergio-web.jpg" alt="Prof. Sergio Fialho" width="507" height="520">
-    <div>
-      <p class="eyebrow">Quem está por trás da IA do Smart</p>
-      <h2>Prof. Sergio Fialho</h2>
-      <p class="lead">A base de conhecimento da IA reúne o método de quem, por mais de 15 anos, ensinou metodologia científica e orientou pesquisas na graduação, no mestrado e no doutorado, em universidades públicas e privadas. Os agentes são desenvolvidos e supervisionados por ele.</p>
-      <ul class="cv">
-        <li>Doutor em Administração pela UFBA.</li>
-        <li>Professor de Metodologia de Pesquisa por 15 anos e orientador de 52 pesquisas em mestrado e doutorado na UNEB (2006–2018) e na UNIFACS (2011–2023).</li>
-        <li>Professor coordenador de Metodologia Científica para cerca de 5.000 alunos de graduação (UNIFACS, 2016 e 2017).</li>
-        <li>Autor de 108 artigos, capítulos de livro e trabalhos científicos apresentados em congressos e seminários, e de 240 trabalhos técnicos.</li>
-        <li>Pesquisas recentes: o uso do ChatGPT por estudantes do ensino superior (UNIFACS, 2023–2024) e Avaliação do Plano Brasileiro de Inteligência Artificial (SEMPAD, 2026).</li>
-        <li>Consultor do Plano de Desenvolvimento de Tecnologia da Informação da UFBA (2025/2026) e do Plano de Inteligência Artificial do IFBA (2026).</li>
-        <li>Prêmio FINEP de Inovação (2003) por projeto de educação a distância.</li>
-      </ul>
-      <a class="btn btn-ghost" style="justify-self:start" href="https://www.smarttcc.com.br/curriculo-do-autor">Currículo de Sergio Fialho</a>
     </div>
   </div>
 </section>
