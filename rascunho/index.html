@@ -406,6 +406,22 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
 /* Etapas com pergunta ao Agente */
 .steps .ask{grid-column:2;font-size:.92rem;line-height:1.4;color:var(--ink);background:color-mix(in srgb,var(--brand) 10%,transparent);border-radius:10px 10px 10px 3px;padding:7px 11px;margin-top:4px;justify-self:start}
 .steps .ask b{display:block;font-family:var(--f-mono);font-size:.64rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--brand-deep)}
+/* Percurso do modo PROFESSOR: colunas fixas, para o painel do curso ocupar o espaço livre ao lado do cartão 7 */
+.steps{grid-template-columns:minmax(0,1fr)}
+@media (min-width:640px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.steps li.curso{grid-column:2}.steps>li:nth-child(7){border-bottom:0}}
+@media (min-width:960px){.steps{grid-template-columns:repeat(3,minmax(0,1fr))}.steps li.curso{grid-column:2 / span 2}}
+.steps li.curso{container-type:inline-size;display:block;align-self:start;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 24px 24px;margin:18px 0 18px clamp(0px,2vw,24px)}
+@media (max-width:639px){.steps li.curso{margin-left:0}}
+.steps .curso-eyebrow{font-family:var(--f-display);font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-deep)}
+.steps li.curso h3{padding-top:4px;font-size:1.15rem}
+.steps li.curso .curso-lead{margin-top:4px;color:var(--muted);font-size:.95rem}
+.steps .curso-kit{list-style:none;margin:16px 0 0;padding:16px 0 0;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 18px;font-variant-numeric:tabular-nums}
+.steps .curso-kit li{display:grid;grid-template-columns:auto 1fr;column-gap:10px;align-items:baseline;padding:0;border:0}
+.steps .curso-kit b{font-family:var(--f-display);font-size:1.5rem;font-weight:800;line-height:1;color:var(--brand-deep);grid-row:span 2;min-width:2.1ch}
+.steps .curso-kit span{font-weight:700;font-size:.95rem;line-height:1.2}
+.steps .curso-kit small{grid-column:2;color:var(--muted);font-size:.82rem;line-height:1.35}
+@container (max-width:540px){.steps .curso-kit{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@container (max-width:280px){.steps .curso-kit{grid-template-columns:minmax(0,1fr)}}
 
 /* Curso como apoio */
 .kit.support-kit b{font-size:1.9rem}
@@ -649,31 +665,25 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
       <li><span class="n">5</span><h3>Coleta e organização dos dados</h3><p>Identifique variáveis, colete e organize os dados com precisão.</p><span class="ask"><b>Pergunte ao Agente</b>“Quais variáveis devo considerar?”</span></li>
       <li><span class="n">6</span><h3>Resultados e conclusão</h3><p>Interprete os resultados e responda à sua pergunta com segurança.</p><span class="ask"><b>Pergunte ao Agente</b>“Minha conclusão responde à pergunta?”</span></li>
       <li><span class="n">7</span><h3>Formatação, banca e publicação</h3><p>Deixe tudo nas normas e prepare a defesa.</p><span class="ask"><b>Pergunte ao Agente</b>“Como cito um artigo com três autores?”</span></li>
+      <li class="curso" aria-label="Também incluído: o curso completo">
+        <p class="curso-eyebrow">Também incluído: o curso completo</p>
+        <h3>E, como apoio, todo o conteúdo do Smart</h3>
+        <p class="curso-lead">Para ver cada etapa em detalhe ou estudar no seu ritmo. É o mesmo material que a IA consulta.</p>
+        <ul class="curso-kit">
+          <li><b>13</b><span>Videoaulas</span><small>curtas, explicando as partes do TCC</small></li>
+          <li><b>435</b><span>Slides</span><small>o passo a passo de cada parte</small></li>
+          <li><b>15</b><span>Infográficos</span><small>com a formatação ABNT completa</small></li>
+          <li><b>22</b><span>Exemplos</span><small>de cada parte de um TCC</small></li>
+          <li><b>6</b><span>Autotestes</span><small>para verificar o que aprendeu</small></li>
+          <li><b>10</b><span>Páginas de apoio</span><small>Bibliografia, Banca e Publicação, Guia ABNT, Guia de IA e outras</small></li>
+        </ul>
+      </li>
     </ol>
   </div>
 </section>
 
-<!-- ===================== CURSO COMO APOIO (antigo "O que você recebe") ===================== -->
-<section id="conteudo" class="pain">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">Também incluído: o curso completo</p>
-      <h2>E, como apoio, todo o conteúdo do Smart</h2>
-      <p class="lead">Videoaulas, slides, exemplos e infográficos continuam no pacote, para quem quer ver cada etapa em detalhe ou estudar no próprio ritmo. É o mesmo material que a IA consulta.</p>
-    </div>
-    <div class="kit support-kit">
-      <div><b>13</b><span>Videoaulas</span><small>curtas, explicando as partes do TCC</small></div>
-      <div><b>435</b><span>Slides</span><small>o passo a passo de como fazer cada parte</small></div>
-      <div><b>15</b><span>Infográficos</span><small>com a formatação ABNT completa</small></div>
-      <div><b>22</b><span>Exemplos</span><small>de cada parte de um TCC</small></div>
-      <div><b>6</b><span>Autotestes</span><small>para verificar o que você aprendeu</small></div>
-      <div><b>10</b><span>Páginas de apoio especializado</span><small>Bibliografia, Banca e Publicação, Guia de Formatos ABNT, Guia de IA e outras</small></div>
-    </div>
-  </div>
-</section>
-
 <!-- ===================== PROVA SOCIAL: GRUPO SER + DEPOIMENTO (mantida) ===================== -->
-<section class="proof" id="parceria" style="border-top:0">
+<section class="proof" id="parceria">
   <div class="wrap proof-grid">
     <div>
       <p class="eyebrow">Quem confia no Smart</p>
