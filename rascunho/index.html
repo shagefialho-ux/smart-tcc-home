@@ -390,6 +390,9 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
   .cmp-row.head .k{display:none}
 }
 .diff h3.sub{font-size:1.3rem;margin-bottom:6px}
+/* Texto do modo AGENTE (abaixo da comparação) */
+.diff .agente-txt{max-width:760px;display:grid;gap:16px;font-size:1.06rem;line-height:1.65;color:var(--ink)}
+.diff .agente-txt .fecho{margin-top:8px;padding-top:20px;border-top:2px solid var(--ink);font-family:var(--f-display);font-weight:700;font-size:1.12rem;line-height:1.45;color:var(--brand-deep)}
 
 /* Etapas com pergunta ao Agente */
 .steps .ask{grid-column:2;font-size:.92rem;line-height:1.4;color:var(--ink);background:color-mix(in srgb,var(--brand) 10%,transparent);border-radius:10px 10px 10px 3px;padding:7px 11px;margin-top:4px;justify-self:start}
@@ -491,11 +494,11 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
       </article>
       <article>
         <q>Meu orientador tem pouco tempo para mim.</q>
-        <p>O modo AGENTE responde às dúvidas de método a qualquer hora e avalia o que você escreveu. Nas reuniões, você e o orientador ficam no conteúdo da pesquisa.</p>
+        <p>O modo AGENTE responde às dúvidas de método a qualquer hora e avalia o que você escreveu. Nas reuniões, você e o orientador focam no conteúdo da pesquisa.</p>
       </article>
       <article>
         <q>O ChatGPT responde, mas eu não confio no resultado.</q>
-        <p>A IA do Smart responde a partir de uma base de conhecimento acadêmico, com o método científico e as normas da ABNT, e mostra onde ver cada ponto no Smart.</p>
+        <p>A IA do Smart (o modo AGENTE) usa a inteligência do Claude e uma base de conhecimento exclusiva e própria, seguindo o método científico e as normas da ABNT.</p>
       </article>
     </div>
   </div>
@@ -507,13 +510,13 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
     <div class="ia-top">
       <div class="sec-head" style="margin-bottom:0">
         <p class="eyebrow">Como funciona</p>
-        <h2>Dois modos de IA. Uma base de conhecimento acadêmico.</h2>
-        <p class="lead">Os dois modos consultam a mesma base: o método do Smart, organizado a partir de mais de 15 anos de ensino e orientação de pesquisas em universidades públicas e privadas. A diferença está em quem conduz.</p>
+        <h2>Dois modos de mentoria. Uma só base de conhecimento.</h2>
+        <p class="lead">Os dois modos consultam conteúdos estruturados do método de pesquisa desenvolvido para o Smart, organizado a partir de mais de 15 anos de ensino e orientação de pesquisas em universidades públicas e privadas. A diferença está em quem conduz.</p>
       </div>
       <ul class="pledge" aria-label="Compromisso do Smart com o uso ético da IA">
         <li>Você é o autor. A IA orienta e avalia; quem escreve é você.</li>
         <li>As respostas partem da base do Smart, com método científico e normas da ABNT.</li>
-        <li>Os pareceres apontam lacunas e sugerem ajustes. A decisão final é sua.</li>
+        <li>O agente PARECER analisa todo o seu trabalho, aponta lacunas e sugere ajustes. A decisão final é sempre sua.</li>
         <li>Agentes desenvolvidos e supervisionados pelo Prof. Sergio Fialho.</li>
       </ul>
     </div>
@@ -526,7 +529,7 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
           <span class="who">o Smart conduz</span>
           <p>Entrega o conteúdo passo a passo e orienta cada etapa da pesquisa e da monografia, na ordem certa: do tema à banca.</p>
           <ul>
-            <li>7 etapas, da pergunta à formatação</li>
+            <li>7 etapas, da pergunta à conclusão</li>
             <li>Exemplos de cada parte do TCC</li>
             <li>Videoaulas e slides como apoio</li>
           </ul>
@@ -535,10 +538,10 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
       </div>
       <div class="mode-col">
         <article class="mode-card">
-          <span class="tag">120 perguntas incluídas</span>
+          <span class="tag">INCLUÌDO - COM 120 perguntas</span>
           <div class="name"><small>MODO</small><b>AGENTE</b></div>
           <span class="who">você conduz</span>
-          <p>Converse livremente com a base de conhecimento do Smart: tire dúvidas, peça orientações sobre o seu trabalho e receba avaliações do que você escreveu.</p>
+          <p>Converse livremente com a IA do Smart: tire dúvidas, peça orientações sobre o seu trabalho e receba avaliações do tópico que você escreveu.</p>
           <ul>
             <li>Respostas a partir da base do Smart</li>
             <li>Avaliação dos seus textos pelos critérios do método</li>
@@ -550,21 +553,21 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
       </div>
       <div class="mode-col">
         <article class="mode-card special">
-          <span class="tag">Agente especial · R$ 39 por parecer</span>
-          <div class="name"><small>AGENTE</small><b>PARECER</b></div>
+          <span class="tag">CONTRATADO · R$ 39 por parecer</span>
+          <div class="name"><small>AGENTE ESPECIAL</small><b>PARECER</b></div>
           <span class="who">uma banca antes da banca</span>
-          <p>Análise detalhada do seu projeto de pesquisa ou da sua monografia: normas acadêmicas e consistência metodológica de cada parte, com lacunas, contradições e sugestões de ajuste.</p>
+          <p>Análise detalhada e completa do seu projeto de pesquisa ou da sua monografia: normas acadêmicas e consistência metodológica de cada parte, com lacunas, contradições e sugestões de ajuste.</p>
         </article>
         <div class="btns">
-          <a class="btn btn-ia" href="https://www.smarttcc.com.br/exemplo-de-parecer">Ver um parecer de exemplo</a>
-          <a class="btn btn-primary" href="https://www.smarttcc.com.br/pag-solicita-parecer">Solicite um Parecer</a>
+          <a class="btn btn-ia" href="https://www.smarttcc.com.br/exemplo-de-parecer">Veja um parecer de exemplo</a>
+          <a class="btn btn-primary" href="https://www.smarttcc.com.br/pag-solicita-parecer">Contrate um Parecer</a>
         </div>
       </div>
     </div>
 
     <div class="links" aria-hidden="true"><span></span><span></span><span></span></div>
     <div class="base">
-      <div class="lbl"><b>Base de conhecimento Smart</b><small>O que a IA consulta antes de responder.</small></div>
+      <div class="lbl"><b>Base de conhecimento Smart</b><small>O que o PROFESSOR ensina e o que o AGENTE consulta antes de responder.</small></div>
       <ul>
         <li class="k">Método em 7 etapas</li>
         <li class="k">Pergunta Estruturada e 7 Critérios</li>
@@ -574,7 +577,7 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
         <li>13 videoaulas</li>
         <li>22 exemplos</li>
         <li>15 infográficos</li>
-        <li>10 páginas de apoio</li>
+        <li>10 páginas de apoio especializado</li>
       </ul>
     </div>
   </div>
@@ -584,36 +587,23 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
 <section class="diff" id="ia-qualquer">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Por que não USAR uma IA qualquer</p>
+      <p class="eyebrow">O PERCURSO DO MODO AGENTE</p>
       <h2>Uma IA genérica responde. A IA do Smart orienta.</h2>
     </div>
     <div class="cmp" role="table" aria-label="Comparação entre IA genérica e IA do Smart">
-      <div class="cmp-row head" role="row"><span class="k" role="columnheader"></span><span class="gen" role="columnheader">IA genérica</span><span class="sm" role="columnheader"><span>IA do Smart</span></span></div>
-      <div class="cmp-row" role="row"><span class="k" role="rowheader">De onde vêm as respostas</span><span class="gen" role="cell">De tudo o que o modelo leu, sem curadoria acadêmica.</span><span class="sm" role="cell">Da base do Smart, organizada por um professor de metodologia.</span></div>
-      <div class="cmp-row" role="row"><span class="k" role="rowheader">Ordem da pesquisa</span><span class="gen" role="cell">Responde à dúvida do momento.</span><span class="sm" role="cell">Conduz você pelas 7 etapas, na ordem em que a pesquisa acontece.</span></div>
-      <div class="cmp-row" role="row"><span class="k" role="rowheader">Avaliação do seu texto</span><span class="gen" role="cell">Comentários gerais.</span><span class="sm" role="cell">Critério por critério do método, e normas da ABNT.</span></div>
-      <div class="cmp-row" role="row"><span class="k" role="rowheader">Autoria</span><span class="gen" role="cell">Escreve por você, se você pedir.</span><span class="sm" role="cell">Orienta e avalia. Quem escreve é você.</span></div>
+      <div class="cmp-row head" role="row"><span class="k" role="columnheader"></span><span class="gen" role="columnheader">IA genérica (LLM comum)</span><span class="sm" role="columnheader"><span>IA do Smart (modo Agente)</span></span></div>
+      <div class="cmp-row" role="row"><span class="k" role="rowheader">De onde vêm as respostas</span><span class="gen" role="cell">De tudo o que o modelo leu no treino original, sem curadoria acadêmica e sem fonte segura..</span><span class="sm" role="cell">Da base do Smart, organizada por um especialista brasileiro em metodologia científica e na ABNT.</span></div>
+      <div class="cmp-row" role="row"><span class="k" role="rowheader">O que utiliza</span><span class="gen" role="cell">A inteligência do LLM e os conteúdos genéricos de seu treinamento original.</span><span class="sm" role="cell">A inteligência do Claude e os conteúdos metodológicos exclusivamente desenvolvidos para o Smart.</span></div>
+      <div class="cmp-row" role="row"><span class="k" role="rowheader">Como conferir</span><span class="gen" role="cell">Quase sempre não consegue indicar.</span><span class="sm" role="cell">Indica sempre o local exato do modo Professor onde verificar o conteúdo.</span></div>
+      <div class="cmp-row" role="row"><span class="k" role="rowheader">Autoria</span><span class="gen" role="cell">Escreve por você, se você pedir, possibilitando o risco do plágio e questionamento ético.</span><span class="sm" role="cell">Orienta, corrige, interage e avalia. Quem escreve é você.</span></div>
     </div>
 
-    <h3 class="sub">Ferramentas próprias que a IA do Smart usa</h3>
-    <div class="features">
-      <article class="feat">
-        <h3>Uma pergunta de pesquisa bem construída</h3>
-        <p>O modelo de <strong>Pergunta Estruturada</strong> e os <strong>7 Critérios</strong> são ferramentas exclusivas do Smart. A IA usa esses critérios para avaliar a sua pergunta, um a um. É a etapa que mais trava estudantes, e a que mais define a qualidade do trabalho.</p>
-        <a href="https://www.smarttcc.com.br/c%C3%B3pia-pergunta">Conheça grátis como o Smart orienta a Pergunta →</a>
-      </article>
-      <article class="feat">
-        <h3>Pesquisa bibliográfica descomplicada</h3>
-        <p>Com a técnica da <strong>Análise Bibliométrica</strong>, você encontra as obras centrais do seu tema. Com a técnica do resumo, estuda as melhores referências com menos tempo e esforço.</p>
-      </article>
-      <article class="feat">
-        <h3>Uma metodologia sólida</h3>
-        <p>Compreenda os tipos de estudo, organize variáveis, colete dados e interprete resultados com critérios claros. A IA confere se o seu objetivo, o seu método e a sua pergunta conversam entre si.</p>
-      </article>
-      <article class="feat">
-        <h3>A qualquer hora, no computador e no celular</h3>
-        <p>O Smart funciona na web e no celular, 24 horas por dia. Estude e tire dúvidas quando puder, e cumpra o seu prazo de entrega.</p>
-      </article>
+    <div class="agente-txt">
+      <p>O modo AGENTE (a IA do Smart) é acessado pelo Menu do Smart ou pelo botão flutuante “Modo Agente” na página de cada tópico do modo PROFESSOR.</p>
+      <p>É um Chat Inteligente, baseado no LLM Claude e na base de conteúdos do Smart, com o qual você pode interagir livremente, fazendo perguntas e solicitando orientações sobre metodologia científica, estruturação do TCC e aplicação das normas da ABNT.</p>
+      <p>Quando contrata o Smart, você tem direito a 120 perguntas no modo AGENTE, válidas por 2 anos. Caso necessite de mais perguntas, pode adquirir créditos adicionais.</p>
+      <p>Se desejar uma análise integral de seu projeto de pesquisa ou de sua dissertação antes da apresentação a uma banca, você pode contratar por preço módico o agente PARECER, para obter um feedback de alta qualidade, com avaliação do seu trabalho, identificação de lacunas e sugestão de ajustes necessários.</p>
+      <p class="fecho">O Smart atende a todas as suas necessidades em pesquisa e monografias com rigor acadêmico, design inovador e elevada facilidade de acesso aos conteúdos.</p>
     </div>
   </div>
 </section>
@@ -624,13 +614,13 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
     <div class="sec-head">
       <p class="eyebrow">O percurso do modo PROFESSOR</p>
       <h2>Sete etapas, na ordem em que a pesquisa acontece</h2>
-      <p class="lead">O modo PROFESSOR conduz você por cada etapa. Quando surgir uma dúvida, o modo AGENTE está a uma pergunta de distância.</p>
+      <p class="lead">O modo PROFESSOR conduz você por cada etapa, passo a passo.                                         Ao final de cada etapa, uma orientação completa sobre as ferramentas de IA disponíveis, incluindo um prompt aplicável à etapa.                                                                                             E quando surgir uma dúvida, o modo AGENTE está a uma pergunta de distância.</p>
     </div>
     <ol class="steps">
       <li><span class="n">1</span><h3>Tema e contexto</h3><p>Delimite o assunto e justifique por que ele merece ser pesquisado.</p><span class="ask"><b>Pergunte ao Agente</b>“Meu tema está delimitado o suficiente?”</span></li>
-      <li><span class="n">2</span><h3>Pergunta de pesquisa</h3><p>A pergunta conduz todo o trabalho. Formule uma pergunta clara, viável e original.</p><span class="ask"><b>Pergunte ao Agente</b>“Avalie minha pergunta pelos 7 Critérios.”</span></li>
-      <li><span class="n">3</span><h3>Revisão da literatura</h3><p>Selecione as obras que realmente importam e estude a fundo as melhores referências.</p><span class="ask"><b>Pergunte ao Agente</b>“Como faço a análise bibliométrica?”</span></li>
-      <li><span class="n">4</span><h3>Modelo de análise</h3><p>Entenda os tipos de estudo e escolha a metodologia adequada ao seu projeto.</p><span class="ask"><b>Pergunte ao Agente</b>“Meu objetivo combina com o meu método?”</span></li>
+      <li><span class="n">2</span><h3>Pergunta de pesquisa</h3><p>A pergunta conduz todo o trabalho. Formule uma Pergunta Estruturada e verifique-a pelos 7 Critérios do Smart.</p><span class="ask"><b>Pergunte ao Agente</b>“Avalie minha pergunta pelos 7 Critérios.”</span></li>
+      <li><span class="n">3</span><h3>Revisão da literatura</h3><p>Selecione as obras que realmente importam, aplique a Análise Bibliométrica e estude a fundo as melhores referências.</p><span class="ask"><b>Pergunte ao Agente</b>“Como faço a análise bibliométrica?”</span></li>
+      <li><span class="n">4</span><h3>Metodologia da pesquisa</h3><p>Compreenda os tipos de estudo, organize variáveis, estruture o Modelo de Análise, especifique a coleta e a análise dos dados com critérios claros. </p><span class="ask"><b>Pergunte ao Agente</b>“Meu objetivo combina com o meu método?”</span></li>
       <li><span class="n">5</span><h3>Coleta e organização dos dados</h3><p>Identifique variáveis, colete e organize os dados com precisão.</p><span class="ask"><b>Pergunte ao Agente</b>“Quais variáveis devo considerar?”</span></li>
       <li><span class="n">6</span><h3>Resultados e conclusão</h3><p>Interprete os resultados e responda à sua pergunta com segurança.</p><span class="ask"><b>Pergunte ao Agente</b>“Minha conclusão responde à pergunta?”</span></li>
       <li><span class="n">7</span><h3>Formatação, banca e publicação</h3><p>Deixe tudo nas normas e prepare a defesa.</p><span class="ask"><b>Pergunte ao Agente</b>“Como cito um artigo com três autores?”</span></li>
