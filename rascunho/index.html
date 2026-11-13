@@ -163,6 +163,8 @@ section{padding-block:clamp(56px,8vw,96px)}
 .try .box{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;border:2px dashed var(--brand);border-radius:18px;padding:clamp(24px,4vw,40px)}
 .try .box > div{display:grid;gap:10px;min-width:0}
 @media (max-width:760px){.try .box{grid-template-columns:1fr}}
+/* "Ainda em dúvida?" logo antes de Parcerias (mesmo fundo): sem o vão duplo entre as duas */
+.try + #parceiros{padding-top:clamp(8px,2vw,24px)}
 
 /* ===== Oferta ===== */
 .offer .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center}
@@ -761,24 +763,21 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
   </div>
 </section>
 
-<!-- ===================== PROVA SOCIAL: GRUPO SER + DEPOIMENTO (mantida) ===================== -->
-<section class="proof" id="parceria">
-  <div class="wrap proof-grid">
-    <div>
-      <p class="eyebrow">Quem confia no Smart</p>
-      <h2>Parceiro do Grupo Ser Educacional</h2>
-      <p class="lead">O Smart TCC é oferecido na GoKursos, a plataforma do Grupo Ser Educacional com cursos livres e disciplinas curriculares a distância, aberta ao público de todo o país.</p>
-      <a class="more" href="https://www.sereducacional.com/instituicoes.html">Conhecer o Grupo Ser Educacional →</a>
-    </div>
-    <div class="proof-dados">
-      <ul class="brands" aria-label="Instituições do Grupo Ser Educacional">
-        <li>UNINASSAU</li><li>UNAMA</li><li>UNG</li><li>UNINORTE</li><li>UNIFAEL</li><li>UNI7</li>
-      </ul>
-      <div class="reach">
-        <div><b>380 mil</b><small>alunos de graduação nessas instituições</small></div>
-        <div><b>40 mil</b><small>concluintes por ano</small></div>
+<!-- ===================== EXPERIMENTE (duas portas) ===================== -->
+<section class="try" id="experimente">
+  <div class="wrap">
+    <div class="box">
+      <div>
+        <p class="eyebrow">Ainda em dúvida?</p>
+        <h2>Veja o Smart funcionando, de graça</h2>
+        <p class="lead">Percorra uma etapa completa do modo PROFESSOR (a construção da <strong>Pergunta)</strong>, veja como o modo AGENTE responde às suas questões, verifique o Checklist completo para apresentar seu projeto ao Comitê de Ética (CEP) e leia um parecer especial completo emitido pelo Agente PARECER.</p>
       </div>
-      <p class="src">Números aproximados, estimados a partir do Censo da Educação Superior 2024 (Inep).</p>
+      <div class="duo">
+        <a class="btn btn-primary" href="https://www.smarttcc.com.br/c%C3%B3pia-pergunta">Conheça uma etapa: a PERGUNTA</a>
+        <a class="btn btn-ghost" href="modo-agente.html">Veja o modo AGENTE em ação</a>
+        <a class="btn btn-ghost" href="https://www.smarttcc.com.br/pag-cep">Verifique sua submissão ao CEP</a>
+        <a class="btn btn-ghost" href="https://www.smarttcc.com.br/exemplo-de-parecer">Leia um Parecer especial completo</a>
+      </div>
     </div>
   </div>
 </section>
@@ -805,25 +804,6 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
         <a class="more" href="https://wa.me/5571981998304?text=Ol%C3%A1!%20Quero%20conhecer%20o%20modelo%20de%20parceria%20institucional%20do%20Smart%20TCC.">Falar sobre parceria institucional →</a>
         <span class="src">Ou escreva para contato@smarttcc.com.br</span>
       </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== EXPERIMENTE (duas portas) ===================== -->
-<section class="try" id="experimente">
-  <div class="wrap">
-    <div class="box">
-      <div>
-        <p class="eyebrow">Ainda em dúvida?</p>
-        <h2>Veja o Smart funcionando, de graça</h2>
-        <p class="lead">Percorra uma etapa completa do modo PROFESSOR (a construção da <strong>Pergunta)</strong>, veja como o modo AGENTE responde às suas questões, verifique o Checklist completo para apresentar seu projeto ao Comitê de Ética (CEP) e leia um parecer especial completo emitido pelo Agente PARECER.</p>
-      </div>
-      <div class="duo">
-        <a class="btn btn-primary" href="https://www.smarttcc.com.br/c%C3%B3pia-pergunta">Conheça uma etapa: a PERGUNTA</a>
-        <a class="btn btn-ghost" href="modo-agente.html">Veja o modo AGENTE em ação</a>
-        <a class="btn btn-ghost" href="https://www.smarttcc.com.br/pag-cep">Verifique sua submissão ao CEP</a>
-        <a class="btn btn-ghost" href="https://www.smarttcc.com.br/exemplo-de-parecer">Leia um Parecer especial completo</a>
-      </div>
     </div>
   </div>
 </section>
