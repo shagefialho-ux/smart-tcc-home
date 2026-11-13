@@ -424,6 +424,12 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
 .diff .agente-txt .fecho,.modo-cards .fecho{grid-column:1/-1;margin-top:10px;background:#0F6B6A;color:#FFFFFF;border-radius:18px;padding:clamp(24px,3.4vw,38px) clamp(24px,4vw,48px);font-family:var(--f-display);font-weight:700;font-size:clamp(1.12rem,1.9vw,1.42rem);line-height:1.4;text-wrap:balance}
 .diff .agente-txt .fecho span,.modo-cards .fecho span{color:#F7E834}
 @media (max-width:760px){.diff .agente-txt,.modo-cards{grid-template-columns:1fr}.ag-card{grid-template-columns:1fr;padding:22px}.ag-card .ag-ico{grid-row:auto;margin-bottom:6px}}
+/* Cartões dos dois percursos: texto em 16px (antes herdava 18px, maior que o título do cartão) e sombra suave */
+.ag-card{padding:22px 24px 24px 20px;box-shadow:0 1px 2px rgb(15 60 70 / .06),0 14px 28px -16px rgb(15 60 70 / .32)}
+.ag-card h3{font-size:1.14rem}
+.ag-card p{font-size:1rem;line-height:1.55}
+.ag-card.extra{box-shadow:none}
+@media (max-width:760px){.ag-card{padding:20px;grid-template-columns:40px minmax(0,1fr);column-gap:12px;row-gap:10px}.ag-card .ag-ico{width:40px;height:40px;border-radius:12px;grid-row:auto;margin:0}.ag-card h3{align-self:center}.ag-card p,.ag-card .objetos{grid-column:1/-1}}
 /* Exemplos de perguntas ao AGENTE (balões de chat) */
 .ag-exemplos{grid-column:1/-1;margin-top:14px}
 .ag-ex-titulo{font-family:var(--f-display);font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-deep);margin-bottom:12px}
