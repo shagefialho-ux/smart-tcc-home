@@ -447,6 +447,8 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
 
 /* Experimente com duas portas */
 .try .box .duo{display:grid;gap:12px;justify-items:stretch}
+.try .box .duo .btn{text-align:center;line-height:1.25}
+@media (max-width:760px){.try .box .duo .btn{font-size:.9rem;padding:13px 14px}}
 
 .hero .stats{gap:10px 22px}
 </style>
@@ -672,17 +674,17 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
     </ol>
     <div class="agente-txt modo-cards">
       <article class="ag-card">
-        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5c2.5-1 5.5-1 9 1 3.5-2 6.5-2 9-1V19c-2.5-1-5.5-1-9 1-3.5-2-6.5-2-9-1z"/><path d="M12 6.5V20"/></svg></span>
+        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5c2.5-1 5.5-1 9 1 3.5-2 6.5-2 9-1V19c-2.5-1-5.5-1-9 1-3.5-2-6.5-2-9-1z"></path><path d="M12 6.5V20"></path></svg></span>
         <h3>O que é</h3>
         <p>É um curso completo de Metodologia de Pesquisa e de elaboração de Monografias (TCCs de graduação, mestrado e doutorado), com uma página dedicada a cada etapa de pesquisa e tópico de monografia: videoaula explicativa, passo a passo de como fazer, formatação ABNT, exemplos e autotestes.</p>
       </article>
       <article class="ag-card">
-        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h9M3 12h6M3 18h9"/><path d="M14 9l7 3.2-3 1.1-1.1 3z"/></svg></span>
+        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h9M3 12h6M3 18h9"></path><path d="M14 9l7 3.2-3 1.1-1.1 3z"></path></svg></span>
         <h3>Onde encontrar</h3>
-        <p>Acesse cada tópico e etapa pelo Menu do Smart, disponível em todas as páginas. Apenas clique no item do Menu para acessar a página do tópico de seu interesse.</p>
+        <p>Acesse cada tópico e etapa pelo Menu do Smart, disponível em todas as páginas de conteúdo. Apenas clique no item do Menu para acessar a página do tópico de seu interesse.</p>
       </article>
       <article class="ag-card">
-        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9.5v5l4.5-2.5z"/></svg></span>
+        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M10 9.5v5l4.5-2.5z"></path></svg></span>
         <h3>Objetos de aprendizagem</h3>
         <ul class="objetos">
           <li><b>13</b><span>Videoaulas</span><small>curtas, explicando as partes do TCC</small></li>
@@ -694,11 +696,11 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
         </ul>
       </article>
       <article class="ag-card">
-        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2 2.2.8-2.2.8L19 21l-.8-2.2-2.2-.8 2.2-.8z"/></svg></span>
+        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"></path><path d="M19 15l.8 2.2 2.2.8-2.2.8L19 21l-.8-2.2-2.2-.8 2.2-.8z"></path></svg></span>
         <h3>Uso de IA dentro do modo PROFESSOR</h3>
-        <p>Ao final de cada página, você encontrará informações detalhadas sobre custos e funcionalidades das ferramentas de IA aplicáveis ao conteúdo da página, além de um prompt pronto para ser aplicado. Essa orientação é independente do uso do modo AGENTE e faz parte do conteúdo do modo PROFESSOR.</p>
+        <p>Em cada página de conteúdo, você aciona o botão USE A IA e acessa informações detalhadas sobre os custos e as funcionalidades das ferramentas de IA aplicáveis ao tópico, além de um prompt Claude-free pronto para uso. Essa orientação é independente do uso do modo AGENTE e faz parte do conteúdo do modo PROFESSOR.</p>
       </article>
-      <p class="fecho">Ou seja, com o Smart você pode realizar todo o curso de ponta a ponta no <span>modo PROFESSOR</span> e, quando quiser, pode acionar o <span>modo AGENTE</span> para estudar e esclarecer pontos específicos. <span>O Smart é completo.</span></p>
+      <p class="fecho">Ou seja, com o Smart você pode realizar todo o curso de ponta a ponta no <span>modo PROFESSOR</span>. Quando quiser, pode acionar o <span>modo AGENTE</span> para estudar e esclarecer pontos específicos. <span>O Smart é completo.</span></p>
     </div>
   </div>
 </section>
@@ -720,12 +722,12 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
 
     <div class="agente-txt">
       <article class="ag-card">
-        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H10l-4 3.5V16H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span>
+        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H10l-4 3.5V16H4z"></path><path d="M8 9.5h8M8 12.5h5"></path></svg></span>
         <h3>O que é</h3>
         <p>É um Chat Inteligente, baseado no LLM Claude e na base de conteúdos do Smart, com o qual você pode interagir livremente, fazendo perguntas e solicitando orientações sobre metodologia científica, estruturação do TCC e aplicação das normas da ABNT.</p>
       </article>
       <article class="ag-card">
-        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h9M3 12h6M3 18h9"/><path d="M14 9l7 3.2-3 1.1-1.1 3z"/></svg></span>
+        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h9M3 12h6M3 18h9"></path><path d="M14 9l7 3.2-3 1.1-1.1 3z"></path></svg></span>
         <h3>Onde encontrar</h3>
         <p>O modo AGENTE (a IA do Smart) é acessado pelo Menu do Smart ou pelo botão flutuante “Modo Agente” na página de cada tópico do modo PROFESSOR.</p>
       </article>
@@ -735,7 +737,7 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
         <p>Quando contrata o Smart, você tem direito a 120 perguntas no modo AGENTE, válidas por 2 anos. Caso necessite de mais perguntas, pode adquirir créditos adicionais.</p>
       </article>
       <article class="ag-card extra">
-        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M10 14l2 2 3.5-4"/></svg></span>
+        <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"></path><path d="M14 3v4h4"></path><path d="M10 14l2 2 3.5-4"></path></svg></span>
         <h3>Agente PARECER <span class="tag">Adicional</span></h3>
         <p>Se desejar uma análise integral de seu projeto de pesquisa ou de sua dissertação antes da apresentação a uma banca, você pode contratar por preço módico o agente PARECER, para obter um feedback de alta qualidade, com avaliação do seu trabalho, identificação de lacunas e sugestão de ajustes necessários.</p>
       </article>
@@ -804,17 +806,19 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
 </section>
 
 <!-- ===================== EXPERIMENTE (duas portas) ===================== -->
-<section class="try">
+<section class="try" id="experimente">
   <div class="wrap">
     <div class="box">
       <div>
         <p class="eyebrow">Ainda em dúvida?</p>
         <h2>Veja o Smart funcionando, de graça</h2>
-        <p class="lead">Percorra uma etapa completa do modo PROFESSOR, a construção da <strong>Pergunta</strong>, ou leia um parecer completo emitido pelo <strong>Agente PARECER</strong>.</p>
+        <p class="lead">Percorra uma etapa completa do modo PROFESSOR (a construção da <strong>Pergunta)</strong>, veja como o modo AGENTE responde às suas questões, verifique o Checklist completo para apresentar seu projeto ao Comitê de Ética (CEP) e leia um parecer especial completo emitido pelo Agente PARECER.</p>
       </div>
       <div class="duo">
-        <a class="btn btn-primary" href="https://www.smarttcc.com.br/c%C3%B3pia-pergunta">Experimentar uma etapa</a>
-        <a class="btn btn-ghost" href="https://www.smarttcc.com.br/exemplo-de-parecer">Ler um parecer</a>
+        <a class="btn btn-primary" href="https://www.smarttcc.com.br/c%C3%B3pia-pergunta">Experimentar a etapa PERGUNTA</a>
+        <a class="btn btn-ghost" href="https://www.smarttcc.com.br/exemplo-de-parecer">Veja o modo AGENTE em ação</a>
+        <a class="btn btn-ghost" href="https://www.smarttcc.com.br/pag-cep">Verifique sua submissão ao CEP</a>
+        <a class="btn btn-ghost" href="https://www.smarttcc.com.br/exemplo-de-parecer">Analise um Parecer especial completo</a>
       </div>
     </div>
   </div>
