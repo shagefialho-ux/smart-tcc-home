@@ -429,9 +429,9 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
 .ag-card h3{font-size:1.14rem}
 .ag-card p{font-size:1rem;line-height:1.55}
 .ag-card.extra{box-shadow:none}
-/* Agente PARECER (serviço adicional): borda amarela hachurada */
-.ag-card.extra{border:6px solid transparent;background:linear-gradient(var(--surface),var(--surface)) padding-box,repeating-linear-gradient(-45deg,#F7E834 0 7px,#E2B900 7px 10px) border-box;padding:17px 19px 19px 15px}
-@media (max-width:760px){.ag-card.extra{padding:15px}}
+/* Agente PARECER (serviço adicional): borda amarela tracejada (traço, espaço, traço…) */
+.ag-card.extra{border:3px dashed #F7E834;background:var(--surface);padding:20.5px 22.5px 22.5px 18.5px}
+@media (max-width:760px){.ag-card.extra{padding:18.5px}}
 @media (max-width:760px){.ag-card{padding:20px;grid-template-columns:40px minmax(0,1fr);column-gap:12px;row-gap:10px}.ag-card .ag-ico{width:40px;height:40px;border-radius:12px;grid-row:auto;margin:0}.ag-card h3{align-self:center}.ag-card p,.ag-card .objetos{grid-column:1/-1}}
 /* Exemplos de perguntas ao AGENTE (balões de chat) */
 .ag-exemplos{grid-column:1/-1;margin-top:14px}
@@ -763,7 +763,7 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
       <article class="ag-card extra">
         <span class="ag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"></path><path d="M14 3v4h4"></path><path d="M10 14l2 2 3.5-4"></path></svg></span>
         <h3>Agente PARECER <span class="tag">Adicional</span></h3>
-        <p>Este é um agente especial, contratado separadamente dos modos Professor e Agente inlcuidos no Smart. O agente PARECER gera um feedback de alta qualidade, com avaliação do seu trabalho (projeto de pesquisa ou monografia) antes de submetê-lo a uma banca, identificando lacunas e sugerindo os ajustes necessários.</p>
+        <p>Este é um agente especial, contratado separadamente dos modos Professor e Agente já incluídos no Smart. O agente PARECER gera um feedback de alta qualidade, com uma avaliação completa do seu trabalho (projeto de pesquisa ou monografia) antes de submetê-lo a uma banca, identificando lacunas e sugerindo os ajustes necessários.</p>
       </article>
       <div class="ag-exemplos">
         <p class="ag-ex-titulo">Exemplos de perguntas ao modo AGENTE</p>
