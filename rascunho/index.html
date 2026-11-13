@@ -426,6 +426,10 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
 .ag-ex-titulo{font-family:var(--f-display);font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-deep);margin-bottom:12px}
 .ag-exemplos ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 12px}
 .ag-exemplos li{background:color-mix(in srgb,var(--brand) 14%,transparent);color:var(--ink);border-radius:16px 16px 16px 4px;padding:10px 16px;font-size:.98rem;line-height:1.35}
+.ag-exemplos li:has(a){padding:0}
+.ag-exemplos li a{display:block;padding:10px 16px;color:inherit;text-decoration:none;border-radius:inherit;border:1.5px solid transparent}
+.ag-exemplos li a::after{content:" →";color:var(--brand-deep);font-weight:700}
+.ag-exemplos li a:hover{border-color:var(--brand)}
 /* Mesmos cartões na faixa do modo PROFESSOR (fundo claro: cartões brancos) */
 .modo-cards{margin-top:48px}
 .modo-cards .ag-card{background:var(--surface)}
@@ -594,7 +598,7 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
           </ul>
         </article>
         <!-- PENDENTE: página "Exemplo de conversa", no molde do Exemplo de Parecer -->
-        <a class="btn btn-ia" href="#">Veja uma conversa real</a>
+        <a class="btn btn-ia" href="modo-agente.html">Veja uma conversa real</a>
       </div>
       <div class="mode-col">
         <article class="mode-card special">
@@ -744,12 +748,12 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
       <div class="ag-exemplos">
         <p class="ag-ex-titulo">Exemplos de perguntas ao modo AGENTE</p>
         <ul>
-          <li>“Meu tema está delimitado o suficiente?”</li>
-          <li>“Avalie minha pergunta pelos 7 Critérios.”</li>
-          <li>“Como faço a análise bibliométrica?”</li>
-          <li>“Meu objetivo combina com o meu método?”</li>
-          <li>“Minha conclusão responde à pergunta?”</li>
-          <li>“Como cito um artigo com três autores?”</li>
+          <li><a href="modo-agente.html#tema">“Meu tema está delimitado o suficiente?”</a></li>
+          <li><a href="modo-agente.html#pergunta">“Avalie minha pergunta pelos 7 Critérios.”</a></li>
+          <li><a href="modo-agente.html#bibliometrica">“Como faço a análise bibliométrica?”</a></li>
+          <li><a href="modo-agente.html#objetivo">“Meu objetivo combina com o meu método?”</a></li>
+          <li><a href="modo-agente.html#conclusao">“Minha conclusão responde à pergunta?”</a></li>
+          <li><a href="modo-agente.html#citacao">“Como cito um artigo com três autores?”</a></li>
         </ul>
       </div>
       <p class="fecho">O Smart atende a todas as suas necessidades em pesquisa e monografias com <span>rigor acadêmico</span>, <span>design inovador</span> e <span>elevada facilidade de acesso</span> aos conteúdos.</p>
@@ -815,10 +819,10 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
         <p class="lead">Percorra uma etapa completa do modo PROFESSOR (a construção da <strong>Pergunta)</strong>, veja como o modo AGENTE responde às suas questões, verifique o Checklist completo para apresentar seu projeto ao Comitê de Ética (CEP) e leia um parecer especial completo emitido pelo Agente PARECER.</p>
       </div>
       <div class="duo">
-        <a class="btn btn-primary" href="https://www.smarttcc.com.br/c%C3%B3pia-pergunta">Experimentar a etapa PERGUNTA</a>
-        <a class="btn btn-ghost" href="https://www.smarttcc.com.br/exemplo-de-parecer">Veja o modo AGENTE em ação</a>
+        <a class="btn btn-primary" href="https://www.smarttcc.com.br/c%C3%B3pia-pergunta">Conheça uma etapa: a PERGUNTA</a>
+        <a class="btn btn-ghost" href="modo-agente.html">Veja o modo AGENTE em ação</a>
         <a class="btn btn-ghost" href="https://www.smarttcc.com.br/pag-cep">Verifique sua submissão ao CEP</a>
-        <a class="btn btn-ghost" href="https://www.smarttcc.com.br/exemplo-de-parecer">Analise um Parecer especial completo</a>
+        <a class="btn btn-ghost" href="https://www.smarttcc.com.br/exemplo-de-parecer">Leia um Parecer especial completo</a>
       </div>
     </div>
   </div>
