@@ -163,8 +163,9 @@ section{padding-block:clamp(56px,8vw,96px)}
 .try .box{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;border:2px dashed var(--brand);border-radius:18px;padding:clamp(24px,4vw,40px)}
 .try .box > div{display:grid;gap:10px;min-width:0}
 @media (max-width:760px){.try .box{grid-template-columns:1fr}}
-/* "Ainda em dúvida?" logo antes de Parcerias (mesmo fundo): sem o vão duplo entre as duas */
-.try + #parceiros{padding-top:clamp(8px,2vw,24px)}
+/* Fundos alternados: Parcerias e Perguntas frequentes em branco (a Oferta, entre elas, fica no fundo claro) */
+#parceiros,.faq{background:var(--surface);border-block:1px solid var(--line)}
+#parceiros .partner{background:var(--paper)}
 
 /* ===== Oferta ===== */
 .offer .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center}
@@ -809,7 +810,7 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
 </section>
 
 <!-- ===================== OFERTA (ajuste pontual: o pacote agora é IA + curso) ===================== -->
-<section class="offer" id="inscricao" style="padding-top:0">
+<section class="offer" id="inscricao">
   <div class="wrap">
     <div class="why">
       <p class="eyebrow">Participe da comunidade Smart</p>
@@ -851,7 +852,7 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
 </section>
 
 <!-- ===================== FAQ (três perguntas novas no topo) ===================== -->
-<section class="faq" style="padding-top:0">
+<section class="faq">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">Perguntas frequentes</p>
