@@ -183,6 +183,15 @@ section{padding-block:clamp(56px,8vw,96px)}
 .price .btn{width:100%}
 .price .secure{font-size:.85rem;opacity:.75}
 @media (max-width:860px){.offer .wrap{grid-template-columns:1fr}}
+/* Oferta: as duas colunas começam na mesma altura */
+.offer .wrap{align-items:start}
+/* Tópico "Três níveis de apoio da IA", com três subtópicos numerados */
+.checks .nv{display:grid;gap:8px;min-width:0}
+.checks .niveis{list-style:none;margin:0;padding:0;display:grid;gap:8px;counter-reset:nv}
+.checks .niveis li{grid-template-columns:24px 1fr;gap:10px;align-items:start;counter-increment:nv;font-size:1rem;line-height:1.45;color:var(--muted)}
+.checks .niveis li::before{content:counter(nv);width:24px;height:24px;border-radius:50%;background:color-mix(in srgb,var(--brand) 16%,transparent);color:var(--brand-deep);font-family:var(--f-display);font-weight:800;font-size:.78rem;display:grid;place-items:center}
+.nv-tag{display:inline-block;margin-left:4px;font-family:var(--f-display);font-size:.62rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;line-height:1;padding:4px 8px;border-radius:999px;vertical-align:.12em;white-space:nowrap;background:color-mix(in srgb,var(--brand) 18%,transparent);color:var(--brand-deep)}
+.nv-tag.pago{background:#F7E834;color:#12283A}
 
 /* ===== FAQ ===== */
 .faq-list{display:grid;border-top:1px solid var(--line);max-width:860px}
@@ -820,8 +829,8 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
       <article class="partner">
         <h3>Orientadores e professores de metodologia</h3>
         <p><strong>O Smart não substitui a orientação.</strong> Ele auxilia o orientador e torna o processo mais produtivo. Com o Smart, seus alunos chegam às orientações com entendimento das etapas de pesquisa e as principais dúvidas de método já trabalhadas. Você se concentra no contexto específico da metodologia e na discussão teórico-empírica da monografia.</p>
-        <a class="more" href="https://wa.me/5571981998304?text=Ol%C3%A1!%20Sou%20professor(a)%20e%20quero%20saber%20mais%20sobre%20o%20Smart%20TCC.">Tem dúvidas? Fale com a equipe no WhatsApp →</a>
-        <a class="more" href="https://www.smarttcc.com.br/exemplo-de-parecer">Avalie em 5 minutos: um parecer do Agente PARECER →</a>
+        <a class="more" href="https://wa.me/5571981998304?text=Ol%C3%A1!%20Sou%20professor(a)%20e%20quero%20saber%20mais%20sobre%20o%20Smart%20TCC.">Tem dúvidas? Fale com com o Prof. Sergio →</a>
+        <a class="more" href="https://www.smarttcc.com.br/exemplo-de-parecer">Avalie qualidade: um parecer do Agente PARECER →</a>
       </article>
       <article class="partner">
         <h3>Instituições de ensino superior</h3>
@@ -836,21 +845,29 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
 <section class="offer" id="inscricao">
   <div class="wrap">
     <div class="why">
-      <p class="eyebrow">Participe da comunidade Smart</p>
-      <h2>Para que serve o Smart TCC</h2>
+      <p class="eyebrow">ADOTE O Smart como sua ferramenta de metodologia</p>
+      <h2>Enfim. Para que serve o Smart TCC ?</h2>
       <ul class="checks">
-        <li>Fazer uma pesquisa do zero, com uma IA que conduz cada etapa</li>
-        <li>Tirar dúvidas de método a qualquer hora</li>
-        <li>Ter seu texto avaliado antes de levar ao orientador</li>
-        <li>Elaborar um projeto de pesquisa e uma metodologia sólidos</li>
-        <li>Usar a IA com ética e segurança, sem abrir mão da autoria</li>
+        <li>Fazer uma pesquisa do zero, no passo a passo que conduz cada etapa, ou auxiliar uma pesquisa em andamento</li>
+        <li><div class="nv">
+          <p class="nv-t">Três níveis de apoio da IA</p>
+          <ol class="niveis">
+            <li><span>Orientação de aplicação de IA em cada tópico <span class="nv-tag">incluído</span></span></li>
+            <li><span>Modo AGENTE (chat de IA do Smart) com crédito de 120 perguntas <span class="nv-tag">incluído</span></span></li>
+            <li><span>Agente PARECER para revisão geral da monografia <span class="nv-tag pago">adquirido</span></span></li>
+          </ol>
+        </div></li>
+        <li>Tirar dúvidas de método a qualquer hora (24x7)</li>
+        <li>Ter seu texto avaliado antes de levar a uma banca</li>
+        <li>Conceber um projeto de pesquisa e uma metodologia sólidos</li>
+        <li>Usar a IA com ética e eficiência, sem abrir mão da autoria</li>
         <li>Otimizar seu tempo e chegar à banca com segurança</li>
       </ul>
       <div class="guarantee">
         <div class="seal" aria-hidden="true">7<small>DIAS</small></div>
         <div>
           <h3>Garantia de 7 dias</h3>
-          <p>Se o Smart não for para você, peça o reembolso em até 7 dias após a compra, pelo formulário disponível no menu do Smart. Devolvemos o valor pago.</p>
+          <p>Se não for para você, peça o reembolso em até 7 dias após a compra, pelo formulário disponível no menu do Smart. Devolvemos o valor pago.</p>
         </div>
       </div>
     </div>
@@ -859,17 +876,15 @@ a.more,.feat a{font-family:var(--f-display);font-weight:700;font-size:.95rem;col
       <div class="val"><small>6x de R$</small><b>26,50</b></div>
       <p class="inst">no cartão, ou <strong>R$ 159 à vista no PIX</strong>. Pagamento único.</p>
       <ul>
-        <li>Modo PROFESSOR ilimitado por 2 anos</li>
-        <li>120 perguntas ao modo AGENTE</li>
-        <li>Curso completo: videoaulas, slides, exemplos e infográficos</li>
-        <li>Guia de IA com prompts para cada etapa</li>
-        <li>Sem mensalidade ou cobrança recorrente</li>
+        <li>Modo PROFESSOR ilimitado por 2 anos: videoaulas, slides, exemplos e infográficos e Guia de IA com prompts para cada etapa</li>
+        <li>Modo AGENTE (chat da IA do Smart) incluído com 120 perguntas</li>
+        <li>Pagamento único: sem mensalidade ou cobrança recorrente</li>
         <li>PIX, cartão de crédito ou PayPal</li>
       </ul>
       <a class="btn btn-primary" href="https://www.smarttcc.com.br/plans-pricing">Comece agora</a>
-      <p class="extra">Precisa de mais? Compre <strong>créditos extras</strong> do modo AGENTE ou um <strong>Agente PARECER</strong> (R$ 39) quando quiser.</p>
+      <p class="extra">Precisa de mais? Compre <strong>créditos extras</strong> do modo AGENTE ou contrate um <strong>Agente PARECER</strong> (R$ 39) quando quiser.</p>
       <p class="secure">Garantia de 7 dias · Pagamento processado em ambiente certificado PCI DSS.</p>
-      <p class="secure">Dúvidas? <a href="https://wa.me/5571981998304?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Smart%20TCC.">Fale no WhatsApp: (71) 98199-8304</a></p>
+      <p class="secure">Dúvidas? <a href="https://wa.me/5571981998304?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Smart%20TCC.">Fale</a> conosco</p>
     </div>
   </div>
 </section>
