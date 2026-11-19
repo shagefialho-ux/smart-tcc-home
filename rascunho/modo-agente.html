@@ -49,7 +49,8 @@ h1 mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inh
 .js .conv.ativa{display:grid}
 .conv + .conv{border-top:1px dashed var(--linha);padding-top:22px}
 .js .conv + .conv{border-top:0;padding-top:0}
-.dica{font-size:.9rem;color:var(--suave);padding:12px 20px;border-top:1px solid var(--linha);background:#fff}
+/* nota abaixo da conversa: em itálico e em caixa verde-clara, para não se confundir com a resposta da IA */
+.dica{margin:0;font-size:.9rem;font-style:italic;color:var(--verde);padding:12px 20px;border-top:1px solid var(--borda-verde);background:var(--verde-claro)}
 /* respostas: mesmo visual do chat do site */
   .aluno { align-self:flex-end; max-width:78%; background:var(--tinta); color:#fff; padding:10px 16px; border-radius:18px 18px 4px 18px; white-space:pre-wrap; word-wrap:break-word; }
   .resp { display:flex; gap:10px; align-items:flex-start; }
@@ -88,6 +89,13 @@ h1 mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inh
 .bt-cont{border-color:#fff;color:#fff}
 @media (max-width:860px){.demo{grid-template-columns:1fr}.perguntas{position:static}.conversa{padding:16px}.aluno{max-width:92%}.cartao{padding:14px 16px}}
 @media (max-width:520px){.topo img{height:36px}.voltar{padding:9px 14px;font-size:.84rem}.resp .av{display:none}}
+/* telas estreitas: os botões do fechamento ocupam a largura e "Comece agora" fica em duas linhas */
+@media (max-width:520px){
+  .fim{padding:20px}
+  .fim .acoes-fim{width:100%;flex-direction:column}
+  .bt{white-space:normal;text-align:center;line-height:1.3}
+  .bt .nl{display:block}
+}
 </style>
 </head>
 <body>
@@ -143,7 +151,7 @@ h1 mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inh
   <div class="fim">
     <p>120 perguntas ao modo AGENTE <span>incluídas</span> no Smart, com o curso completo do modo PROFESSOR.</p>
     <div class="acoes-fim">
-      <a class="bt bt-am" href="https://www.smarttcc.com.br/plans-pricing">Comece agora: 6x de R$ 26,50</a>
+      <a class="bt bt-am" href="https://www.smarttcc.com.br/plans-pricing"><span>Comece agora: <span class="nl">6x de R$ 26,50</span></span></a>
       <a class="bt bt-cont" href="./" data-voltar>Voltar para a Home</a>
     </div>
   </div>
